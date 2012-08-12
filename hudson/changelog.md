@@ -2,7 +2,8 @@
 
 ## 0.9 ( August 11th, 2012 )
 
-* 
+* Updated positioning of social icons in mobile view
+* Updated positioning of brand element in mobile view
 
 ## 0.8 ( August 6th, 2012) 
 

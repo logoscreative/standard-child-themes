@@ -1,7 +1,7 @@
 /*  
 Theme Name: Hudson
 Theme URI: http://tommcfarlin.com
-Version: 0.8
+Version: 0.9
 Description: The personal theme for Tom McFarlin based on Stanard 3.
 Author: Tom McFarlin
 Author URI: http://tommcfarlin.com
@@ -180,6 +180,10 @@ body .syntaxhighlighter code, body .syntaxhighlighter .gutter {
 	#site-title {
 		display: none;
 	}
+	
+	#social-networking .social-icons {
+		margin-top: 3px;
+	}
 
 }
 
@@ -199,6 +203,10 @@ body .syntaxhighlighter code, body .syntaxhighlighter .gutter {
 	#site-title {
 		margin-left: 4px;
 		margin-top: -6px;
+	}
+	
+	#site-title .brand {
+		margin-top: -4px;
 	}
 
 }

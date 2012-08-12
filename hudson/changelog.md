@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9 ( August 11th, 2012 )
+
+* 
+
 ## 0.8 ( August 6th, 2012) 
 
 * Adding styles for PayPal and Stripe

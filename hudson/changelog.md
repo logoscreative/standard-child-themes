@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10 ( August 15th, 2012 )
+
+* Updating styles for code
+* Updating header font weights
+* Adding additional margins for Single Post Message support
+* Moving the margin of the site title
+
 ## 0.9 ( August 11th, 2012 )
 
 * Updated positioning of social icons in mobile view

@@ -1,8 +1,8 @@
 /*  
 Theme Name: Hudson
 Theme URI: http://tommcfarlin.com
-Version: 0.9
-Description: The personal theme for Tom McFarlin based on Stanard 3.
+Version: 0.10
+Description: The personal theme for Tom McFarlin based on Standard 3.
 Author: Tom McFarlin
 Author URI: http://tommcfarlin.com
 License: GNU General Public License v2.0
@@ -16,6 +16,16 @@ Template: standard
 
 /* ------------------------------------------------------------------------ Customizations */
 
+h2 {
+	font-weight: normal;
+}
+
+code {
+  background-color: #fee9cc;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1px 3px;
+}
+
 #site-title {
 	margin-top: 2px;
 }
@@ -26,6 +36,7 @@ Template: standard
 }
 
 #site-title a {
+	margin-top: 2px;
 	color: #fff !important;	
 }
 
@@ -45,6 +56,14 @@ Template: standard
 
 .post-title {
 	font-weight: 400;
+}
+
+.post p {
+	line-height: 22px;
+}
+
+#no-comments .title {
+	font-weight: normal;	
 }
 
 /* -- Quote Post Format -- */
@@ -170,6 +189,12 @@ body .syntaxhighlighter code, body .syntaxhighlighter .gutter {
 .sharedaddy .sd-sharing {
 	border: 0 !important;
 	margin-left: -100px !important;
+}
+
+/* -- Single Post Message -- */
+
+.single-post-message {
+	margin-bottom: 20px;
 }
 
 /* ------------------------------------------------------------------------ Media Queries */

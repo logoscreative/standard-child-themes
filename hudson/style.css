@@ -62,10 +62,6 @@ code {
 	line-height: 22px;
 }
 
-#no-comments .title {
-	font-weight: normal;	
-}
-
 /* -- Quote Post Format -- */
 
 .post.format-quote .post-header {
@@ -115,6 +111,10 @@ code {
 
 #commentform #comment-form-avatar { 
 	margin-right: 10px;
+}
+
+#no-comments .title {
+	font-weight: normal;	
 }
 
 /* -- Google Custom Search -- */
@@ -194,7 +194,7 @@ body .syntaxhighlighter code, body .syntaxhighlighter .gutter {
 /* -- Single Post Message -- */
 
 .single-post-message {
-	margin-bottom: 20px;
+	margin-bottom: 20px !important;
 }
 
 /* ------------------------------------------------------------------------ Media Queries */

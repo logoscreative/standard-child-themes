@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11 ( August 17th, 2012 )
+
+* Adding a border style to h2 in the content
+* Moving styles to LESS and importing in base stylesheet
+
 ## 0.10 ( August 15th, 2012 )
 
 * Updating styles for code

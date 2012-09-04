@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12 ( September 4th, 2012 )
+
+* Adjusting styles for the post format and the link post format
+* Converting editor-style.css to LESS
+* Updating editor-style.css to match the front end styles
+
 ## 0.11 ( August 17th, 2012 )
 
 * Adding a border style to h2 in the content

@@ -66,21 +66,26 @@ code {
 /* -- Quote Post Format -- */
 
 .post.format-quote { 
-
+	
 	.post-header  {
 	
 		background-color: #000;
-		background-image: url(images/bg-quote.png);
+		background-image: url(../images/bg-quote.png);
+		
+		.post-title {
+			border-bottom: 0;
+		}
 		
 		.entry-content {
 		
-			background-image: url(images/icn-quote.png);
+			background-image: url(../images/icn-quote.png);
 			
 			p {
 				font-style: normal;
 				color: #fff;
 				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 				font-weight: 200;
+				margin-top: -4px;
 			}
 		}
 		
@@ -97,6 +102,10 @@ code {
 	}
 	
 	.post-header {
+	
+		.post-title {
+			margin-top: -4px;
+		}
 		
 		.entry-content {
 			padding-left: 50px;

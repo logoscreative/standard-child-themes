@@ -41,12 +41,13 @@ code {
   margin-bottom: 40px;
 }
 /* -- Quote Post Format -- */
+.post.format-quote .post-title {
+  border-bottom: 0;
+  margin-bottom: 0px;
+}
 .post.format-quote .post-header {
   background-color: #000;
   background-image: url(../images/bg-quote.png);
-}
-.post.format-quote .post-header .post-title {
-  border-bottom: 0;
 }
 .post.format-quote .post-header .entry-content {
   background-image: url(../images/icn-quote.png);

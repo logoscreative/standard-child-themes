@@ -1,6 +1,6 @@
 /*  
-Theme Name: Wood Child Theme
-Theme URI: http://support.8bit.io/entries/373948-customization-wood-standard-theme-1-0-2-0
+Theme Name: Skyline Child Theme
+Theme URI: http://everchaningmedia.com
 Version: Preview 3
 Description: This is a child theme for Standard Theme 3
 Author: Jason Bradley
@@ -12,7 +12,7 @@ Template: standard
 
 /* ------------------------------------------------------------------------ Import Standard Styles */
 
-@import url( '../../standard/style.css' );
+@import url( '../standard/style.css' );
 
 /* ------------------------------------------------------------------------ Customizations */
 
@@ -21,59 +21,95 @@ Template: standard
 @white: #fff;
 @black: #000;
 @light-gray: #eee;
-@gray: #f0f0f0;
-@dark-gray: #999;
-@darkest-gray: #333;
-@blue: #02619c;
+@gray: #dbdbdb;
+@dark-gray: #252834;
+@darkest-gray: #0f1015;
+
+
+@red: #b60001;
+@dark-red: #4b0000;
+
 
 //Variables
 @body-text-color: @white;
+@body-background-color: @white;
 
-@h-color: @black;
+@h-color: @red;
 
-@link-color: @black;
-@link-color-hover: @darkest-gray;
+@link-color: @gray;
+@link-color-hover: @red;
 
-@site-description-color: @white;
+@site-title-color: @white;
+@site-title-color-hover: @red;
+@site-description-color: @gray;
 @text-shadow-color: @black;
+
+@hover-background-color: @light-gray;
+@link-padding-number: 5px;
+
+@nav-link-color: @white;
+@nav-link-color-hover: @red;
+@nav-link-color-active: @red;
+@nav-dropdown-link-color: @white;
+@nav-dropdown-link-color-hover: @red;
+@nav-bar-background-color: transparent;
 
 @content-background-color: @white;
 @blockquote-background-color: @gray;
 @code-color: @black;
 
-@post-background-color: @blue;
 @post-title-color: @white;
-@post-header-color: @black;
-@the-time-color: @post-header-color;
-@post-meta-color: @black; 
+@post-title-background-color: @red;
+@post-title-color-hover: @gray;
+@post-meta-color: @white; 
+@the-time-color: @white;
 
-@post-format-quote-background-color: @dark-gray;
+@post-format-quote-background-color: @red;
+@post-format-link-background-color-top: @darkest-gray;
+@post-format-link-background-color-bottom: @black;
+@post-format-link-post-title-color: @white;
+@post-format-link-post-title-color-hover: @red;
 
-@pager-background-color: @black;
+@more-link-color-hover: @white;
+@more-link-background-color-hover: @red;
+
+@pager-background-color: transparent;
 @pager-text-color: @white;
-@pager-background-color-hover: @dark-gray;
+@pager-background-color-hover: @red;
 @pager-text-color-hover: @white;
 
-@widget-title-color: @white;
-@widget-list-link-color: @black;
-@widget-list-link-color-hover: @darkest-gray;
+@widget-list-link-color: @white;
+@widget-list-link-color-hover: @red;
 
-@border-color: @black;
+@border-color: @gray;
 
-@footer-background-color: transparent;
+@footer-background-color: @black;
 @footer-widget-title-color: @white;
-@footer-widget-list-link-color: @black;
-@footer-text-widget-text-color: @darkest-gray;
+@footer-widget-list-link-color: @white;
+@footer-text-widget-text-color: @white;
 
-@input-text-focus-color-r: 0;
-@input-text-focus-color-g: 0;
-@input-text-focus-color-b: 0;
+@subfloor-background-color: @black;
+@subfloor-credit-color: @white;
+@subfloor-credit-link-color: @white;
+@subfloor-credit-link-color-hover: @red;
+
+@input-text-focus-color-r: 59;
+@input-text-focus-color-g: 188;
+@input-text-focus-color-b: 217;
 
 //Mixins
 .rounded-corners(@radius: 4px) {
 	border-radius: @radius;
 	-moz-border-radius: @radius;
 	-webkit-border-radius: @radius;
+}
+
+.hover() {
+	color: @red;
+	transition: all .25s ease-in-out; 
+	-moz-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	.no-underline();
 }
 
 .gradient-background-fill(@from-color: @white, @to-color: @black) {
@@ -115,52 +151,146 @@ Template: standard
 
 /* Body */
 body { 
-	background: #fff url(images/wood.jpg) repeat left top;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: @h-color;
-	font-family: Arial, Helvetica, Sans-serif;
+	color: @body-text-color;
+	background: @darkest-gray url(images/bg.png) top center no-repeat; 
+	font-family: helvetica, sans-serif;
 }
 
 a { 
 	color: @link-color;
+	.no-underline();
 	&:hover { 
-		color: @link-color-hover; 
+		.hover();
 	}
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: @h-color;
+}
+
 /* Header */
+#site-title { 
+	a { 
+		color: @site-title-color; 
+		font-size: 58px; 
+		line-height: 0; 
+		margin-top: 20px; 
+		.no-underline();
+		&:hover { 
+			.no-underline();
+			color: @site-title-color-hover;
+		}
+	}
+
+}
 
 #site-description { 
 	color: @site-description-color; 
 	font-size: 14px; 
 	.to-uppercase(); 
-	text-shadow: 0 0 20px @text-shadow-color;
 	line-height: 0; 
 	margin-top: 20px; 
 	.no-underline();
+	float: right;
+}
+
+#wrapper {
+	background: url(images/dot-grid.png) repeat;
+	padding: 155px 0 40px;
+}
+
+/* Navigation */
+.navbar {
+	padding-top: 5px;
+	.nav {
+		> li {
+			padding-right: 5px;
+			> a {
+				color: @nav-link-color;
+				text-shadow: none;
+				&:hover {
+					.hover();
+				}
+			}
+		}
+	}
+	.dropdown-menu a {
+		color: @nav-dropdown-link-color;
+		&:hover {
+			color: @nav-dropdown-link-color-hover;
+			.hover();
+		}
+	}
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+    color: @nav-link-color;
+    text-shadow: none;
+    .hover();
+    background: none;
+}
+
+.navbar-inner, .navbar .fill {
+	background-color: @nav-bar-background-color;
+	.no-shadow();
+	background-image: none;
+	filter: none;
+}
+
+#menu-above-header {
+	padding-top: 20px
+}
+
+#header {
+	padding-top: 65px;
 }
 
 /* Post */
-
-.post, #comments, #pings, #no-comments, #respond {
-	background: #fff url(images/postbg.jpg) no-repeat left top;
-	.no-shadow();
+.post-title, .post-title a, .post-title a:visited {
+	color: @post-title-color;
+	background-color: @post-title-background-color;
+	padding: 5px;
+	&:hover {
+		color: @post-title-color-hover;
+	}
 }
 
-.post-header-meta {
-	color: @post-header-color;
-	border-bottom: none;
+.post.format-link .post-title, .post.format-link .post-title a, .post.format-link .post-title a:visited {
+	background-color: transparent;
+	&:hover {
+		color: @post-format-link-post-title-color-hover;
+	}
+}
+
+.post.format-quote .post-title, .post.format-quote .post-title a, .post.format-qupte .post-title a:visited {
+	background-color: transparent;
 }
 
 .the-time {
 	color: @the-time-color;
 }
 
+.post-meta {
+	color: @post-meta-color;
+	border-top: none;
+}
+
+.post, #comments, #pings, #no-comments, #respond, #author-box {
+	background: transparent; 
+}
+
+.post-header {
+	border-bottom: none;
+}
+
 .post.format-quote .post-header {
 	background-color: @post-format-quote-background-color;
 	background-image: url(images/bg-quote.png);
+}
+
+.post.format-link .post-header {
+	.gradient-background-fill(@post-format-link-background-color-top, @post-format-link-background-color-bottom);
 }
 
 .breadcrumb {
@@ -178,16 +308,19 @@ blockquote {
 	color: @code-color;
 }
 
-.pager a, .previous-page a, .next-page a {
-	color: @pager-text-color;
-	background: @pager-background-color;
+.more-link {
+	padding: 10px;
+	&:hover {
+		color: @more-link-color-hover;
+		background-color: @more-link-background-color-hover;
+		.rounded-corners();
+	}
 }
 
 .pager a:hover, .previous-page a:hover, .next-page a:hover {
 	color: @pager-text-color-hover;
 	background: @pager-background-color-hover;
 }
-
 
 /* Widgets */
 .widget {
@@ -203,29 +336,83 @@ blockquote {
 			}
 		}
 	}
-	h4.widget-title {
-		color: @widget-title-color;
+}
+
+/* Influence Widget */
+.thumbnails li {
+	border-bottom: none !important;
+}
+
+.si-individual li {
+	border-bottom: none !important;
+}
+
+/* Activity Widget */
+.tabbed-widget {
+	.nav-tabs {
+		> li {
+			border-bottom: none !important;
+			> a {
+				&:hover {
+					color: @red !important;
+				}
+			}
+		}
+		> li.active > a {
+		
+		}
+	}
+	.tab-content ul li a {
+		&:hover {
+			color: @red !important;
+			text-decoration: none !important;
+		}
 	}
 }
 
 /* Footer */
 #footer {
-	background: @footer-background-color;
+	background-color: @footer-background-color;
 	.widget {
 		h4.widget-title {
 			color: @footer-widget-title-color;
-			border-bottom: solid 1px @border-color;
 		}
 		ul li {
 			border-bottom: none;
 			a {
 				color: @footer-widget-list-link-color;
-				.no-underline();
+				&:hover {
+					.hover();
+				}
 			}
 		}
 	}
 	.textwidget {
 		color: @footer-text-widget-text-color;
+	}
+}
+
+/* Sub-floor */
+#sub-floor {
+	background-color: @subfloor-background-color;
+	#credit {
+		color: @subfloor-credit-color;
+		a {
+			color: @subfloor-credit-link-color;
+			&:hover {
+				.hover();
+			}
+		}
+	}
+}
+
+/* Home */
+.page-template-template-home-php {
+	#footer {
+		margin-top: 85px;
+	}
+	#footer-widgets {
+		display: none;
 	}
 }
 
@@ -244,7 +431,12 @@ textarea:focus {
 
 /* Smartphones */
 @media (max-width: 480px) {
-
+	#header-widget {
+		padding-top: 15px;
+	}
+	.menu-header-container {
+		background: #0F1015;
+	}
 }
 
 /* Tablet and Mobile */

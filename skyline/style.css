@@ -1,6 +1,7 @@
+@import url('../standard/style.css');
 /*  
-Theme Name: Tron Child Theme
-Theme URI: http://support.8bit.io/entries/437065-customization-tron-inspired-standard-theme-2-5-4
+Theme Name: Skyline Child Theme
+Theme URI: http://everchaningmedia.com
 Version: Preview 3
 Description: This is a child theme for Standard Theme 3
 Author: Jason Bradley
@@ -10,20 +11,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: standard
 */
 /* ------------------------------------------------------------------------ Import Standard Styles */
-@import url( '../../standard/style.css' );
 /* ------------------------------------------------------------------------ Customizations */
 /* Body */
 body {
   color: #ffffff;
-  background: #000000 url(images/bg.jpg) top center no-repeat;
+  background: #0f1015 url(images/bg.png) top center no-repeat;
   font-family: helvetica, sans-serif;
 }
 a {
-  color: #999999;
+  color: #dbdbdb;
   text-decoration: none;
 }
 a:hover {
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #3bbcd9;
+  color: #b60001;
 }
 /* Header */
 #site-title a {
@@ -47,18 +47,20 @@ h6 {
 }
 #site-title a:hover {
   text-decoration: none;
-  color: #3bbcd9;
+  color: #b60001;
 }
 #site-description {
-  color: #999999;
+  color: #dbdbdb;
   font-size: 14px;
   text-transform: uppercase;
   line-height: 0;
   margin-top: 20px;
   text-decoration: none;
+  float: right;
 }
 #wrapper {
   background: url(images/dot-grid.png) repeat;
+  padding: 155px 0 40px;
 }
 /* Navigation */
 .navbar {
@@ -72,18 +74,17 @@ h6 {
   text-shadow: none;
 }
 .navbar .nav > li > a:hover {
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   text-decoration: none;
 }
 .navbar .dropdown-menu a {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar .dropdown-menu a:hover {
-  color: #000000;
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -93,7 +94,7 @@ h6 {
 .navbar .nav .active > a:hover {
   color: #ffffff;
   text-shadow: none;
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -109,11 +110,39 @@ h6 {
   background-image: none;
   filter: none;
 }
+#menu-above-header {
+  padding-top: 20px;
+}
+#header {
+  padding-top: 65px;
+}
 /* Post */
 .post-title,
 .post-title a,
 .post-title a:visited {
   color: #ffffff;
+  background-color: #b60001;
+  padding: 5px;
+}
+.post-title:hover,
+.post-title a:hover,
+.post-title a:visited:hover {
+  color: #dbdbdb;
+}
+.post.format-link .post-title,
+.post.format-link .post-title a,
+.post.format-link .post-title a:visited {
+  background-color: transparent;
+}
+.post.format-link .post-title:hover,
+.post.format-link .post-title a:hover,
+.post.format-link .post-title a:visited:hover {
+  color: #b60001;
+}
+.post.format-quote .post-title,
+.post.format-quote .post-title a,
+.post.format-qupte .post-title a:visited {
+  background-color: transparent;
 }
 .the-time {
   color: #ffffff;
@@ -128,27 +157,23 @@ h6 {
 #no-comments,
 #respond,
 #author-box {
-  background: #000000 url(images/post-bg.png) top center no-repeat;
-  border: 1px solid #1a8ba5;
-  -webkit-box-shadow: 0 0 5px #3bbcd9;
-  -moz-box-shadow: 0 0 5px #3bbcd9;
-  box-shadow: 0 0 5px #3bbcd9;
+  background: transparent;
 }
 .post-header {
   border-bottom: none;
 }
 .post.format-quote .post-header {
-  background-color: #3bbcd9;
+  background-color: #b60001;
   background-image: url(images/bg-quote.png);
 }
 .post.format-link .post-header {
-  background-color: #333333;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000));
-  background-image: -webkit-linear-gradient(top, #333333, #000000);
-  background-image: -moz-linear-gradient(top, #333333, #000000);
-  background-image: -o-linear-gradient(top, #333333, #000000);
-  background-image: -ms-linear-gradient(top, #333333, #000000);
-  background-image: linear-gradient(top, #333333, #000000);
+  background-color: #0f1015;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f1015), to(#000000));
+  background-image: -webkit-linear-gradient(top, #0f1015, #000000);
+  background-image: -moz-linear-gradient(top, #0f1015, #000000);
+  background-image: -o-linear-gradient(top, #0f1015, #000000);
+  background-image: -ms-linear-gradient(top, #0f1015, #000000);
+  background-image: linear-gradient(top, #0f1015, #000000);
   filter: progid:dximagetransform.microsoft.gradient(GradientType=0, StartColorStr='@from-color', EndColorStr='@to-color');
 }
 .breadcrumb {
@@ -156,7 +181,7 @@ h6 {
   border: none;
 }
 blockquote {
-  background: #f0f0f0;
+  background: #dbdbdb;
   padding: 20px;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -165,16 +190,23 @@ blockquote {
 #commentform code {
   color: #000000;
 }
+.more-link {
+  padding: 10px;
+}
+.more-link:hover {
+  color: #ffffff;
+  background-color: #b60001;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
 .pager a:hover,
 .previous-page a:hover,
 .next-page a:hover {
-  color: #333333;
-  background: #3bbcd9;
+  color: #ffffff;
+  background: #b60001;
 }
 /* Widgets */
-.widget ul li {
-  border-bottom: solid 1px #f0f0f0;
-}
 .widget ul li a {
   color: #ffffff;
   transition: all 0.25s ease-in-out;
@@ -182,7 +214,7 @@ blockquote {
   -webkit-transition: all 0.25s ease-in-out;
 }
 .widget ul li a:hover {
-  color: #ffffff;
+  color: #b60001;
   text-decoration: none;
 }
 /* Influence Widget */
@@ -197,26 +229,15 @@ blockquote {
   border-bottom: none !important;
 }
 .tabbed-widget .nav-tabs > li > a:hover {
-  color: #3bbcd9 !important;
+  color: #b60001 !important;
 }
 .tabbed-widget .tab-content ul li a:hover {
-  color: #3bbcd9 !important;
+  color: #b60001 !important;
   text-decoration: none !important;
-}
-.si-total-number {
-  text-shadow: 2px 2px 2px rgba(57, 188, 217, 0.75) !important;
 }
 /* Footer */
 #footer {
-  background: url(images/dot-grid.png) repeat;
-}
-#footer .widget {
-  border: 1px solid #1a8ba5;
-  -webkit-box-shadow: 0 0 5px #3bbcd9;
-  -moz-box-shadow: 0 0 5px #3bbcd9;
-  box-shadow: 0 0 5px #3bbcd9;
-  padding: 5px;
-  background: #000000 url(images/post-bg.png) top center no-repeat;
+  background-color: #000000;
 }
 #footer .widget h4.widget-title {
   color: #ffffff;
@@ -228,7 +249,7 @@ blockquote {
   color: #ffffff;
 }
 #footer .widget ul li a:hover {
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -239,7 +260,7 @@ blockquote {
 }
 /* Sub-floor */
 #sub-floor {
-  background: url(images/dot-grid.png) repeat;
+  background-color: #000000;
 }
 #sub-floor #credit {
   color: #ffffff;
@@ -248,11 +269,18 @@ blockquote {
   color: #ffffff;
 }
 #sub-floor #credit a:hover {
-  color: #3bbcd9;
+  color: #b60001;
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   text-decoration: none;
+}
+/* Home */
+.page-template-template-home-php #footer {
+  margin-top: 85px;
+}
+.page-template-template-home-php #footer-widgets {
+  display: none;
 }
 /* Misc */
 input:focus,
@@ -267,7 +295,12 @@ textarea:focus {
 /* ------------------------------------------------------------------------ Media Queries */
 /* Smartphones */
 @media (max-width: 480px) {
-  
+  #header-widget {
+    padding-top: 15px;
+  }
+  .menu-header-container {
+    background: #0F1015;
+  }
 }
 /* Tablet and Mobile */
 @media (max-width: 979px) {

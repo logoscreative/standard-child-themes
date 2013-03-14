@@ -1,0 +1,16 @@
+/*  
+Theme Name: Logos Creative Child Theme for Standard
+Theme URI: https://github.com/eightbit/standard-child-theme-kit
+Version: 2.0
+Description: Logos Creative child theme for Standard 3
+Author: Logos Creative
+Author URI: http://logos-creative.com
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: standard
+*/
+
+/* Uncomment the @import line below to bring in Standard's CSS
+
+@import url( '../standard/style.css' );*/
+@import url( 'css/lib/font-awesome.min.css' );

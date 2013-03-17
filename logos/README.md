@@ -1,10 +1,10 @@
-# Logos Creative Child Theme for Standard
+# Logos Child Theme for Standard
 
 ## Description
 
 Child theme kit for [Logos Creative](http://logos-creative.com) themes built on [Standard 3](http://standardtheme.com).
 
-What this *really* does is use Standard as a framework. **All of Standard's styles and scripts are dequeued! Instead, the latest version of Bootstrap is loaded along with FitVids.js.** You'll need to write your own styles. You can also uncomment the `@import` line in the `style.css` file if you just want to grab Standard's main CSS. Otherwise, remove the `wp_dequeue_style`/`wp_dequeue_script` calls in `functions.php`.
+What this *really* does is use Standard as a starting point. **All of Standard's styles and scripts are dequeued! Instead, the latest version of Bootstrap is loaded along with FitVids.js and Font Awesome.** You'll need to write your own styles. You can also uncomment the `@import` line in the `style.css` file if you just want to grab Standard's main CSS—and the same goes for some default WordPress image classes. Otherwise, remove the `wp_dequeue_style`/`wp_dequeue_script` calls in `functions.php` to get individual Standard styles back.
 
 ## Shortcodes
 
